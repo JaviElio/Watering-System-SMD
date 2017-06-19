@@ -3,9 +3,9 @@
   (general
     (links 51)
     (no_connects 0)
-    (area 52.924999 68.924999 129.075001 99.075001)
+    (area 36.72143 63.678571 145.202382 108.7)
     (thickness 1.6)
-    (drawings 12)
+    (drawings 13)
     (tracks 189)
     (zones 0)
     (modules 23)
@@ -65,7 +65,7 @@
     (grid_origin 53 99)
     (visible_elements FFFFEF7F)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010f0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -86,9 +86,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory Gerbers))
   )
 
   (net 0 "")
@@ -1008,6 +1008,9 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
+  (gr_text "Riego Automatico SMD\nV1.0 17-06-2017 J.Elío\n" (at 60.75 97) (layer F.SilkS)
+    (effects (font (size 0.8 0.8) (thickness 0.15) italic) (justify left))
+  )
   (gr_text "VCC/GND/SCL/SDA\nSENSOR" (at 59.25 77.25) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.2)))
   )
