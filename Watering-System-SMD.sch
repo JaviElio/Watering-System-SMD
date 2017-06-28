@@ -662,7 +662,6 @@ Text Label 7000 1500 2    39   ~ 0
 TX
 Text Label 7000 1400 2    39   ~ 0
 RX
-NoConn ~ 6550 1900
 NoConn ~ 6550 2200
 NoConn ~ 6550 2300
 Wire Wire Line
@@ -715,12 +714,9 @@ Wire Wire Line
 Wire Wire Line
 	6150 4450 6450 4450
 Wire Wire Line
-	6150 4650 6900 4650
-Wire Wire Line
 	6900 4550 6900 4750
 Wire Wire Line
 	6900 4750 6150 4750
-Connection ~ 6900 4650
 $Comp
 L VCC #PWR021
 U 1 1 59432303
@@ -762,4 +758,12 @@ Wire Wire Line
 	4700 4750 4600 4750
 Wire Wire Line
 	4600 4750 4600 4850
+Wire Wire Line
+	6150 4650 6450 4650
+Wire Wire Line
+	6550 1900 7000 1900
+Text Label 6950 1900 2    39   ~ 0
+CH_PD
+Text Label 6450 4650 2    39   ~ 0
+CH_PD
 $EndSCHEMATC
