@@ -2,8 +2,8 @@
 
   (general
     (links 51)
-    (no_connects 6)
-    (area 52.924999 68.924999 129.075001 99.075001)
+    (no_connects 0)
+    (area 36.72143 63.678571 145.202382 108.7)
     (thickness 1.6)
     (drawings 13)
     (tracks 197)
@@ -116,7 +116,6 @@
     (via_drill 0.4)
     (uvia_dia 0.3)
     (uvia_drill 0.1)
-    (add_net /CH_PD)
   )
 
   (net_class Potencia ""
@@ -141,6 +140,7 @@
     (via_drill 0.4)
     (uvia_dia 0.3)
     (uvia_drill 0.1)
+    (add_net /CH_PD)
     (add_net /EV_ON)
     (add_net /RST)
     (add_net /RX)

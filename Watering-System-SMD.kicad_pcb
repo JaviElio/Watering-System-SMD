@@ -3,7 +3,7 @@
   (general
     (links 51)
     (no_connects 0)
-    (area 36.72143 63.678571 145.202382 108.7)
+    (area 52.924999 68.924999 129.075001 99.075001)
     (thickness 1.6)
     (drawings 13)
     (tracks 197)
@@ -1106,7 +1106,7 @@
       (xy 0.004103 -2.03194) (xy 0.006349 -2.032) (xy 0.024394 -2.028316)) (layer F.SilkS) (width 0.01))
   )
 
-  (gr_text "Riego Automatico SMD\nV1.0 17-06-2017 J.Elío\n" (at 60.75 97) (layer F.SilkS)
+  (gr_text "Riego Automatico SMD\nV1.0 28-06-2017 J.Elío\n" (at 60.75 97) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.15) italic) (justify left))
   )
   (gr_text "VCC/GND/SCL/SDA\nSENSOR" (at 59.25 77.25) (layer F.SilkS)
