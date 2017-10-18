@@ -2,8 +2,16 @@
 /**********************************************
   Project: Watering System SMD V1.0       31-07-2017
   JEC
-***********************************************/
-
+***********************************************
+***********************************************
+ 
+ Comments:
+  - ESP-01 must be previously configured:
+      * AT+CWMODE_DEF=3                         // SoftAP+Station mode 
+      * AT+CWJAP_DEF= "<ssid>","<password>"     // Connect to wifi access point
+      * AT+UART_DEF=9600,8,1,0,0                // Set UART speed to 9600
+      
+************************************************/
 
 // INCLUDES
 #include <I2CSoilMoistureSensor.h>
@@ -18,8 +26,8 @@
 // ADJUSTMENT VARIABLES
 unsigned int nLightMax         = 40000;           // Max light to water
 unsigned int nTempMin          = 4;               // Min. temp to water (ºC)
-unsigned int nMoistureMin      = 350;             // Min. moist to water
-unsigned int nMoistureMax      = 400;             // Max. moist to water
+unsigned int nMoistureMin      = 490;             // Min. moist to water
+unsigned int nMoistureMax      = 540;             // Max. moist to water
 unsigned int nWateringTime     = 20000;           // Watering time (ms) 
 unsigned int nMaxWateringTimes = 5;               // Max. watering times
 
@@ -51,14 +59,17 @@ SoftwareSerial esp(RX, TX);
 
 // VARIABLES
 int          nState = 0;
-const char*  GET = "GET /update?key=PXHL4S4I4WITLDS3&field1=%u&field2=%d&field3=%d&field4=%d";
+// Channel 1 Key: PIRFQ50STIMCZGOA
+// Channel 2 Key: 0IVB4R88FL2FIZ84
+// Channel 3 Key: UOJOVYHY71MMLH3Q
+const char*  GET = "GET /update?key=UOJOVYHY71MMLH3Q&field1=%u&field2=%d&field3=%d&field4=%d";
 char         cmd[80];
 int          nChars = 0;
 uint16_t     nLight;                      // Measured light value
 int          nTemp;                       // Measured temp value
 unsigned int nMoisture;                   // Measured moist value
-unsigned int nShortSleep = 30;           // Short sleep lenght in seconds 300s=5min
-unsigned int nLongSleep = 60;           // Long sleep lenght in seconds 3600s=1h
+unsigned int nShortSleep = 300;           // Short sleep lenght in seconds 300s=5min
+unsigned int nLongSleep = 3600;           // Long sleep lenght in seconds 3600s=1h
 bool         bOldState = 0;               // Previous valve state
 unsigned int nWateringTimes = 0;          // Watering times
 
@@ -287,7 +298,7 @@ void uploadData() {
 
       // Switch on ESP and wait while connects to wifi network
       ESP_ON;
-      delay(5000);
+      delay(10000);
 
       // Connect to thinkspeak.com
       esp.println(F("AT+CIPSTART=\"TCP\",\"184.106.153.149\",80"));
@@ -303,7 +314,7 @@ void uploadData() {
       esp.println();
       delay(1000);
       esp.println(cmd);
-      delay(1000);
+      delay(1500);
       ESP_OFF; 
   
 }

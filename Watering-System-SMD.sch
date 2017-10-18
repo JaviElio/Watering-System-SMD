@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Watering-System-SMD-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -89,7 +90,7 @@ F 3 "" H 2100 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MMBF170 Q1
+L MMBF170-RESCUE-Watering-System-SMD Q1
 U 1 1 5923371B
 P 2650 6950
 F 0 "Q1" H 2850 7025 50  0000 L CNN
@@ -100,7 +101,7 @@ F 3 "" H 2650 6950 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 2N7002 Q2
+L 2N7002-RESCUE-Watering-System-SMD Q2
 U 1 1 592337CE
 P 5300 6800
 F 0 "Q2" H 5500 6875 50  0000 L CNN
