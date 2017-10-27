@@ -2,7 +2,9 @@
 
 Watering system with Attiny84 and i2c moisture sensor.
 
+THINGSPEAK LINK:
 
+https://thingspeak.com/channels/339098
 
 FEATURES:
 
