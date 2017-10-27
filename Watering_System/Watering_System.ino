@@ -59,10 +59,7 @@ SoftwareSerial esp(RX, TX);
 
 // VARIABLES
 int          nState = 0;
-// Channel 1 Key: PIRFQ50STIMCZGOA
-// Channel 2 Key: 0IVB4R88FL2FIZ84
-// Channel 3 Key: UOJOVYHY71MMLH3Q
-const char*  GET = "GET /update?key=UOJOVYHY71MMLH3Q&field1=%u&field2=%d&field3=%d&field4=%d";
+const char*  GET = "GET /update?key=XXXXXXXXXXXXXX&field1=%u&field2=%d&field3=%d&field4=%d";
 char         cmd[80];
 int          nChars = 0;
 uint16_t     nLight;                      // Measured light value
